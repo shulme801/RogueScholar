@@ -1,0 +1,27 @@
+{
+  "name": "rogue-scholar",
+  "version": "1.0.0",
+  "description": "Forum to challenge people to get out of their bubble",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shulme801/RogueScholar.git"
+  },
+  "author": "Joshua Gomez Logan Sawyer Michael Ashe Steve Hulme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shulme801/RogueScholar/issues"
+  },
+  "homepage": "https://github.com/shulme801/RogueScholar#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "sequelize": "^4.32.1",
+    "sequelize-cli": "^3.2.0"
+  }
+}
