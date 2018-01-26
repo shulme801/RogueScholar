@@ -22,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
-  Author.associate = function(models) {
+  Users.associate = function(models) {
     // Associating Users with Posts
     // When an User is deleted, also delete any associated Posts
     Users.hasMany(models.Post, {
