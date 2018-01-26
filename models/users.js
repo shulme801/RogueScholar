@@ -17,9 +17,9 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     updated_at: DataTypes.DATE,
-    deleted_at: false,
+    deleted_at: DataTypes.DATE
+  }, {
     underscored: true
-
   });
 
   Users.associate = function(models) {
