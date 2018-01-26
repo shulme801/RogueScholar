@@ -31,10 +31,9 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Comments.associate = function(models) {
-    // Associating Post with Comments
-    // When an Post is deleted, also delete any associated Comments
-    Post.hasMany(models.Comments, {
-      onDelete: "cascade"
+    // Associating Comments with Post
+    Comments.belongsTo(models.Post, {
+      
     });
   };
 
