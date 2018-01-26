@@ -1,14 +1,22 @@
 module.exports = function(sequelize, DataTypes) {
   
-  // Setting up users model
-  var Users = sequelize.define("users", {
+  // Setting up comments model
+  var Comments = sequelize.define("comments", {
     id: {
       type:DataTypes.UUID,
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false
     },
-    username: {
+    post_id: {
+      type: DataTypes.UUID,
+      allowNull: false
+    },
+    content: {
+      type: DataTypes.TEXT,
+      required: true
+    },
+    commenter_username: {
       type: DataTypes.STRING,
       required: true
     },
@@ -23,12 +31,12 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Users.associate = function(models) {
-    // Associating Users with Posts
-    // When an User is deleted, also delete any associated Posts
-    Users.hasMany(models.Post, {
+    // Associating Post with Comments
+    // When an Post is deleted, also delete any associated Comments
+    Post.hasMany(models.Comments, {
       onDelete: "cascade"
     });
   };
 
-  return Users;
+  return Comments;
 };
