@@ -20,8 +20,6 @@ module.exports = function(app) {
   app.get('/', function(req, res) {
       console.log("testing");
       res.sendFile(path.join(__dirname, "test2.html"));
-
-
   });
 
   app.get("/news", function(req, res) {
