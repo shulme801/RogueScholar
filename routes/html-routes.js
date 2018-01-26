@@ -5,11 +5,10 @@ var path = require("path");
 // Routes
 // =============================================================
 module.exports = function(app) {
-
-  //
-  // app.get("/", function(req, res) {
-  //   res.render("hi");
-  // });
+ 
+  app.get("/api/create_user", function(req, res) {
+    res.render(path.join(__dirname, "./public/logan.html");
+  });
 
   //NewsAPI code
   //================================================
