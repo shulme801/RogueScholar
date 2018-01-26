@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   
   // Setting up comments model
-  var Comments = sequelize.define("comments", {
+  var Comments = sequelize.define("Comments", {
     id: {
       type:DataTypes.UUID,
       primaryKey: true,
