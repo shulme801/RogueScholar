@@ -1,0 +1,44 @@
+	nav {
+  			background-color: black;
+  		}
+
+  		nav .brand-logo {
+  			color:red;
+  		}
+
+  		body {
+  			background: url('background.jpg');
+  		}
+
+  		.btn, .btn-large {
+  			background-color: red;
+  		}
+
+  		#skull {
+  			height: 45px;
+    		margin-top: 7px;
+    		margin-left: 5px;
+    		margin-right: 5px;
+  		}
+
+  		.btn:hover, .btn-large:hover {
+    		background-color: black;
+		}
+
+		#inspired-button {
+			margin-left: 49px;
+		}
+
+		.page-footer {
+    		font-family: sans-serif;
+    		text-align: center;
+    		padding-top: 20px;
+    		color: white;
+    		background-color: black;
+		}
+
+		textarea.materialize-textarea:focus:not([readonly]) {
+    		border-bottom: 1px solid rgba(0,0,0,0.87);
+    		-webkit-box-shadow: 0 1px 0 0 #26a69a;
+    		box-shadow: 0 1px 0 0 #f44336;
+		}
