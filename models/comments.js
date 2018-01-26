@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     underscored: true
   });
 
-  Users.associate = function(models) {
+  Comments.associate = function(models) {
     // Associating Post with Comments
     // When an Post is deleted, also delete any associated Comments
     Post.hasMany(models.Comments, {
