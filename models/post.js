@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("Post", {
+  var Post = sequelize.define("post", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,6 +21,9 @@ module.exports = function(sequelize, DataTypes) {
       foreignKey: {
         allowNull: false
       }
+    });
+    Post.hasMany(models.Comments, {
+      onDelete: "cascade"
     });
   };
 
