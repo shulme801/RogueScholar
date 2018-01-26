@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
   Post.associate = function(models) {
     // We're saying that a Post should belong to an user
     // A Post can't be created without an user due to the foreign key constraint
-    Post.belongsTo(models.Author, {
+    Post.belongsTo(models.Users, {
       foreignKey: {
         allowNull: false
       }
