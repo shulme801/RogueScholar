@@ -32,7 +32,12 @@ module.exports = function(sequelize, DataTypes) {
 
   Comments.associate = function(models) {
     // Associating Comments with Post
-    Comments.belongsTo(models.Post);
+    Comments.belongsTo(models.Posts, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+
   };
 
   return Comments;

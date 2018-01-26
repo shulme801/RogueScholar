@@ -1,31 +1,44 @@
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("Post", {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+  
+  // Setting up Posts model
+  var Posts = sequelize.define("Posts", {
+    id: {
+      type:DataTypes.UUID,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull: false
     },
-    body: {
+    user_id: {
+      type: DataTypes.UUID,
+      allowNull: false
+    },
+    content: {
       type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
-    }
+      required: true
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    updated_at: DataTypes.DATE,
+    deleted_at: DataTypes.DATE
+  }, {
+    underscored: true
   });
 
   Post.associate = function(models) {
-    // We're saying that a Post should belong to an user
+    // A Post should belong to an user
     // A Post can't be created without an user due to the foreign key constraint
-    Post.belongsTo(models.Users, {
+    Posts.belongsTo(models.Users, {
       foreignKey: {
         allowNull: false
       }
     });
-    Post.hasMany(models.Comments, {
+    // When an Post is deleted, also delete any associated Comments
+    Posts.hasMany(models.Comments, {
       onDelete: "cascade"
     });
   };
 
-  return Post;
+  return Posts;
 };
