@@ -26,3 +26,33 @@ $(document).ready(function() {
     };
     getNews();
 });
+
+$("#home-button").onclick(function() {
+    app.get("/", function(req, res) {
+        // Handlebars requires an object to be sent to the dog handlebars file.
+        // Lucky for us, animals[0] is an object!
+      
+        // 1. send the dog object from the animals array to the dog handlebars file.
+        res.render("index");
+      });
+})
+
+$("#inspired-button").onclick(function() {
+    app.get("/news", function(req, res) {
+        // Handlebars requires an object to be sent to the dog handlebars file.
+        // Lucky for us, animals[0] is an object!
+      
+        // 1. send the dog object from the animals array to the dog handlebars file.
+        res.render("news");
+      });
+})
+
+$("#join-button").onclick(function() {
+    app.get("/post", function(req, res) {
+        // Handlebars requires an object to be sent to the dog handlebars file.
+        // Lucky for us, animals[0] is an object!
+      
+        // 1. send the dog object from the animals array to the dog handlebars file.
+        res.render("post");
+      });
+})
