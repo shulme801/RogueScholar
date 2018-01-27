@@ -1,7 +1,6 @@
 	<nav>
     	<div class="nav-wrapper">
     		<img src="./skull.jpg" class="circle" id="skull">
-      		<a href="#" class="brand-logo">RogueScholar</a>
     	</div>
   	</nav>
 
@@ -10,7 +9,7 @@
             <div class="card">
                 <div class="card content">
                     <div class="gradient">
-                        <div id="img"></div>
+                        <div id="img" class="responsive-img" class="col s12 m12"></div>
                         <h1><span id="title">This is a Sample Title</span></h1>
                     </div>
 
@@ -28,30 +27,26 @@
   	 <!-- Sign Up Card row -->
     <div class="row">
         <div class="col s12 m12">
-            <div class="card">
+            <div class="card" id="respond">
                 <div class="card-content">
                     <span class="card-title"><h3>Respond.</h3></span>
-                        <form class="container">
-                            <div class = "row">
-							    <div class="input-field col s12">
-         					        <textarea id="textarea1" class="materialize-textarea"></textarea>
-       						    </div>
-                       
-                                <div class="input-field col m6">
-                                    <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">
-                                        Submit <i class="material-icons right">lightbulb_outline</i>
-                                    </button>
-                                </div>
+                    <form class="container">
+                        <div class = "row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
                             </div>
-                        </form>
-
-
-                 <!--  </div> -->
-
+                    
+                            <div class="input-field col m6">
+                                <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">
+                                    Submit <i class="material-icons right">lightbulb_outline</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div><!-- End of Sign Up Card row -->
-	    <div class="row">
+	    <div class="row" id="buttondiv">
 	        <div class="col s12 m12">
   	            <a class="waves-effect waves-light btn-large" id="home-button">Home</a>
 
@@ -59,11 +54,10 @@
 	        </div>
 	    </div>
 
-	    <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">
+	    <footer class="page-footer" style="position:relative;bottom:0;left:0;width:100%;">
             <div class="container">
                 © 2017 Copyright Gomez, Sawyer, Hulme, & Ashe
            <!--  <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
             </div>
-          
         </footer>
     </div>
