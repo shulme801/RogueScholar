@@ -3,10 +3,10 @@ $("#login").on("click", function(event) {
 
   // Grab the form elements
   var username = {
-    username: $("#username").val().trim(),
+    username: $("input[name='username']").val().trim(),
   };
 
-  console.log(username);
+  console.log("form username inpu " + username);
 
   // This line is the magic. It"s very similar to the standard ajax function we used.
   // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
