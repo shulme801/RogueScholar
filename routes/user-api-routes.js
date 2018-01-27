@@ -2,12 +2,14 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-	// Get 
-	app.get("/api/user", function(req, res) {
-		console.log("Hit '/api/user/' route");
-		console.log("Here is the re.body " + req.body);
-		db.Users.findAll({}).then(function(dbUsers) {
-			res.json(dbUsers);
+	app.post("/api/login_user", function(req, res) {
+		console.log("Hit '/api/login_user' route");
+		console.log("Here is the req.body: ", req.body);
+		db.Users.findOne({ 
+			where: {username: req.body.username} 
+		})
+		.then(function(dbUsers) {
+			res.json(dbUsers);		
 		});
 	});
 

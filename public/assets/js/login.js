@@ -6,22 +6,20 @@ $("#login").on("click", function(event) {
     username: $("input[name='username']").val().trim(),
   };
 
-  username = JSON.stringify(username);
-
-  console.log("form username input " + username);
+  console.log("form username input: ", username);
 
   // This line is the magic. It"s very similar to the standard ajax function we used.
   // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
   // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
   // depending on if a tables is available or not.
 
-  $.get("/api/user", username,
+  $.post("/api/login_user", username,
     function(data) {
 
-    console.log("Data from db" + data);
+    console.log("Data from db ", data);
 
     // Clear the form when submitting
-    $("#username").val("");
+    $("input[name='username']").val("");
 
   });
 
