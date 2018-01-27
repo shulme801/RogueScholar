@@ -6,7 +6,9 @@ $("#login").on("click", function(event) {
     username: $("input[name='username']").val().trim(),
   };
 
-  console.log("form username inpu " + username);
+  JSON.stringify(username);
+
+  console.log("form username input " + username);
 
   // This line is the magic. It"s very similar to the standard ajax function we used.
   // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
