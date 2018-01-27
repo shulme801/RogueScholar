@@ -18,7 +18,7 @@ $("#login").on("click", function(event) {
   $.get("/api/user", username,
     function(data) {
 
-    console.log(data);
+    console.log("Data from db" + data);
 
     // Clear the form when submitting
     $("#username").val("");
