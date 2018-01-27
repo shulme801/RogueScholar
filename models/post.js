@@ -2,14 +2,10 @@ module.exports = function(sequelize, DataTypes) {
   
   // Setting up Posts model
   var Posts = sequelize.define("Posts", {
-    id: {
+    post_id: {
       type:DataTypes.UUID,
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4,
-      allowNull: false
-    },
-    user_id: {
-      type: DataTypes.UUID,
       allowNull: false
     },
     content: {
