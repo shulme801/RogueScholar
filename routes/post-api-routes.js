@@ -6,7 +6,7 @@ module.exports = function(app) {
 		console.log(req.body);
 		db.Posts.create({
 			content: req.body.content,
-			user_user_id: 641d41c3-6972-4ffd-bf82-1e522cc00f3b,
+			user_user_id: 1,
 		}).then(function(dbUser) {
 			res.json(dbUser);
 		});
