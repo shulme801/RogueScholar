@@ -6,7 +6,7 @@ $("#login").on("click", function(event) {
     username: $("input[name='username']").val().trim(),
   };
 
-  JSON.stringify(username);
+  username = JSON.stringify(username);
 
   console.log("form username input " + username);
 
