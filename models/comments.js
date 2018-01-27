@@ -2,14 +2,10 @@ module.exports = function(sequelize, DataTypes) {
   
   // Setting up comments model
   var Comments = sequelize.define("Comments", {
-    id: {
+    comment_id: {
       type:DataTypes.UUID,
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4,
-      allowNull: false
-    },
-    post_id: {
-      type: DataTypes.UUID,
       allowNull: false
     },
     content: {
