@@ -1,4 +1,4 @@
-$("#login").on("click", function(event) {
+$("#createUser").on("click", function(event) {
   event.preventDefault();
 
   // Grab the form elements
@@ -13,13 +13,10 @@ $("#login").on("click", function(event) {
   // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
   // depending on if a tables is available or not.
 
-  $.post("/api/login_user", username,
+  $.post("/api/create_user", username,
     function(data) {
 
     console.log("Data from db ", data);
-
-    localStorage.setItem("user_id",data.user_id);
-    console.log("Here is the stored user_id "+localStorage.setItem);
 
     // Clear the form when submitting
     $("input[name='username']").val("");
