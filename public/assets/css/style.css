@@ -1,5 +1,12 @@
 body {
-	background: rgb(202, 249, 255)
+	background: rgb(202, 249, 255);
+	height: 100%;
+	position: relative;
+}
+
+.main-container {
+	padding-bottom: 80px;
+	min-height: 100vh;
 }
 
 nav {
@@ -60,10 +67,13 @@ nav {
 .page-footer {
 	font-family: sans-serif;
 	text-align: center;
-	margin-top: 20px;
 	padding: 20px;
 	color: white;
 	background-color: rgb(145, 15, 15);
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
 }
 
 textarea.materialize-textarea:focus:not([readonly]) {
