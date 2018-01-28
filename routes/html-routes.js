@@ -33,9 +33,9 @@ module.exports = function(app) {
   const NewsAPI = require('newsapi');
   const newsapi = new NewsAPI('9f11331ebca94648a396f71e4aec00fa');
 
-  app.get('/', function(req, res) {
+  app.get('/news', function(req, res) {
       console.log("testing");
-      res.sendFile(path.join(__dirname, "test2.html"));
+      res.sendFile(path.join(__dirname, "news.handlebars"));
   });
 
   app.get("/news", function(req, res) {
