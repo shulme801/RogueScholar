@@ -10,6 +10,23 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/logan.html"));
   });
 
+
+  //***Joshua put the below code on 1/28
+  //possible misuse of syntax
+  //should not be res.render maybe?
+    app.get("/", function(req, res) {
+        res.render("index");
+    });
+
+    app.get("/news", function(req, res) {
+        res.render("news");
+    });
+
+    app.get("/post", function(req, res) {
+        res.render("post");
+    });
+
+
   //NewsAPI code
   //================================================
   //================================================
