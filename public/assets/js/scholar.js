@@ -1,5 +1,6 @@
-$(document).ready(function() {
-    $("#search-btn").on("click", function() {
+//$(document).ready(function() {
+
+    $("#inspired-button").on("click", function() {
         console.log("testing")
         getNews();
     });
@@ -45,4 +46,4 @@ $(document).ready(function() {
         });
     });
 
-});
+//});
