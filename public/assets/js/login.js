@@ -8,18 +8,18 @@ $("#login").on("click", function(event) {
 
   console.log("form username input: ", username);
 
-  // This line is the magic. It"s very similar to the standard ajax function we used.
-  // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-  // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-  // depending on if a tables is available or not.
-
+  // Post form data to our api route that handles user login
   $.post("/api/login_user", username,
     function(data) {
 
     console.log("Data from db ", data);
 
-    localStorage.setItem("user_id",data.user_id);
-    console.log("Here is the stored user_id "+localStorage.setItem);
+    if (data) {
+      localStorage.setItem("user_id", data.user_id);
+      console.log("Here is the stored user_id: ", data.user_id);
+    } else {
+      console.log("This user does not exist, please create user before logging in");
+    }
 
     // Clear the form when submitting
     $("input[name='username']").val("");
