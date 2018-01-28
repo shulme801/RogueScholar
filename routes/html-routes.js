@@ -38,7 +38,7 @@ module.exports = function(app) {
       res.sendFile(path.join(__dirname, "news.handlebars"));
   });
 
-  app.get("/news", function(req, res) {
+  app.get("/apinews", function(req, res) {
       newsapi.v2.topHeadlines({
           language: 'en',
           country: 'us'

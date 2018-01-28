@@ -1,4 +1,4 @@
-//$(document).ready(function() {
+$(document).ready(function() {
 
     $("#inspired-button").on("click", function() {
         console.log("testing")
@@ -6,8 +6,8 @@
     });
 
     function getNews() {
-        $.get("/news", function(data) {
-            console.log(data);
+        $.get("/apinews", function(data) {
+            console.log("func getNews ", data);
             $("#source").text(data.source.name);
             $("#author").text(data.author);
             $("#title").text(data.title);
@@ -16,11 +16,11 @@
             $("#urlToImage").text(data.urlToImage);
             $("#publishedAt").text(data.publishedAt);
             var img = $('<img id="urlToImage">'); //Equivalent: $(document.createElement('img'))
-                img.attr('src', urlToImage);
+                img.attr('src', data.urlToImage);
                 img.appendTo('#img');
             var thelink = $('<a>',{
                 text: 'Click to view article',
-                href: url,
+                href: data.url,
                 target: '_blank'
                 }).appendTo('#url');
         });    
@@ -46,4 +46,4 @@
         });
     });
 
-//});
+});
