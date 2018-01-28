@@ -4,25 +4,39 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Log User In</title>
-		<!-- Latest compiled and minified CSS & JS -->
-		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<!-- Compiled and minified CSS -->
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	</head>
 
 	<body>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+
+		<!-- Modal Trigger -->
+		<!-- <a class="waves-effect waves-light btn modal-trigger" href="#loginmodal">Modal</a> -->
+
+		<!-- Modal Structure -->
+		<div id="loginmodal" class="modal">
+			<div class="modal-content">
 				<form>
-					<label for="username">User Name</label>
-					<input type="text" class="form-control" name="username">
-					<button type="submit" class="btn btn-default" id="login">Login</button>
+					<label for="username">Enter User Name</label>
+					<input type="text" name="username">
+					<!-- <button type="submit" id="login">Login</button> -->
 				</form>
 			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action waves-effect waves-green btn-flat" id="login">Login</a>
+			</div>
 		</div>
-		</d>
-	</body>
 
-	<script src="/assets/js/login.js"></script>
+		<!-- Log Out -->
+		<a href="#!" class="modal-action waves-effect waves-green btn-flat" id="logout">Log Out</a>
+
+		<!--Import jQuery before materialize.js-->
+      	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      	<!-- Compiled and minified JavaScript -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script src="/assets/js/login.js"></script>
+
+	</body>
 
 </html>
