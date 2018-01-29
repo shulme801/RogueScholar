@@ -1,6 +1,5 @@
 $("#create_post").on("click", function(event) {
   event.preventDefault();
-
   // Grab the form elements
   var post = {
     user_user_id: localStorage.getItem("user_id"),
@@ -16,6 +15,7 @@ $("#create_post").on("click", function(event) {
     console.log("Data from db ", data);
 
     if(data) {
+      localStorage.setItem("post_id", data.post_id);
       console.log("Successfully created post");
     } else {
       console.log("Failed to create post");
