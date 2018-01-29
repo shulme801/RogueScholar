@@ -12,10 +12,9 @@ $(document).ready(function() {
             $("#author").text(data.author);
             $("#title").text(data.title);
             $("#description").text(data.description);
-            //$("#url").text(data.url);
             $("#urlToImage").text(data.urlToImage);
             $("#publishedAt").text(data.publishedAt);
-            var img = $('<img id="urlToImage">'); //Equivalent: $(document.createElement('img'))
+            var img = $('<img id="urlToImage">');
                 img.attr('src', data.urlToImage);
                 img.appendTo('#img');
             var thelink = $('<a>',{
@@ -26,7 +25,6 @@ $(document).ready(function() {
         });    
     };
     getNews();
-
 
     $("#home-button").click(function() {
         app.get("/", function(req, res) {
@@ -45,5 +43,4 @@ $(document).ready(function() {
             res.render("post");
         });
     });
-
 });
