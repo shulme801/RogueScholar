@@ -70,6 +70,12 @@ nav {
 	width: 160px;
 }
 
+
+#join-button {
+    width: 160px;
+   
+}
+
 .page-footer {
 	font-family: sans-serif;
 	text-align: center;
@@ -119,10 +125,15 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 @media all and (max-width: 599px) and (min-width:320px) {
+	
 	#title{
-		font-size:20px;
-		line-height: 27px;
-	}
+        font-size:20px;
+        line-height: 27px;
+        font-family: 'Oswald', sans-serif;
+        top:100px;
+    }
+
+
 	#buttondiv{
 		width: 370px;
 		position:fixed;
@@ -150,6 +161,17 @@ textarea.materialize-textarea:focus:not([readonly]) {
 		border-color: rgba(255, 0, 0, 0.158);
 		color: #660000;
 	}
+
+
+	#join-button {
+        width: 160px;
+        height:50px;
+        background-color:#ffffff8c ;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgba(255, 0, 0, 0.158);
+        color: #660000;
+    }
 }
 
 #source {
