@@ -22,7 +22,7 @@ $("#create_post").on("click", function(event) {
     }
 
     // Clear the form when submitting
-    $("input[name='username']").val("");
+    $("textarea[name='content']").val("");
 
   });
 
