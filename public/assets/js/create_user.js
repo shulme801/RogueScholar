@@ -3,7 +3,7 @@ $("#createUser").on("click", function(event) {
 
   // Grab the form elements
   var username = {
-    username: $("input[name='username']").val().trim(),
+    username: $("input[name='createUsername']").val().trim(),
   };
 
   console.log("form username input: ", username);
@@ -19,7 +19,7 @@ $("#createUser").on("click", function(event) {
     console.log("Data from db ", data);
 
     // Clear the form when submitting
-    $("input[name='username']").val("");
+    $("input[name='createUsername']").val("");
 
   });
 
