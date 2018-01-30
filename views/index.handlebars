@@ -8,11 +8,11 @@
         <a href="#!" class="modal-action waves-effect waves-green btn-flat" id="logout">Log Out</a>
       </nav>
 
-      <div class="row" id="buttondiv">
+	    <div class="row" id="buttondiv">
 	        <div class="col s12 m12">
+  	            <a class="waves-effect waves-light btn-large" id="home-button" href="/"><i class="material-icons">home</i></a>
+                <a class="waves-effect waves-light btn-large" id="inspired-button" href="/news">News</a>
   	            <a class="waves-effect waves-light btn-large" id="join-button" href="/post">Posts</a>
-
-  	            <a class="waves-effect waves-light btn-large" id="inspired-button" href="/news">Get Inspired</a>
 	        </div>
 	    </div>
 
@@ -51,9 +51,9 @@
   <div id="loginmodal" class="modal">
     <div class="modal-content">
     <form>
-        <label for="username">Enter User Name</label>
+        <label for="username" id="form-label">Enter User Name</label>
         <input type="text" name="username">
-        <label for="createUsername">Create User</label>
+        <label for="createUsername" id="form-label">Create User</label>
         <input type="text" class="form-control" name="createUsername">
       </form>
     </div>

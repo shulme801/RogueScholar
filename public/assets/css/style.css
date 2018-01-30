@@ -38,6 +38,8 @@ nav {
 
 .card-title {
 	font-family: 'Shrikhand', sans-serif;
+	position: relative;
+	color:rgb(145, 15, 15);
 }
 
 .card-content {
@@ -49,7 +51,7 @@ nav {
 }
 
 #buttondiv{
-	width: 385px;
+	width: 200px;
 	margin-bottom: 20px;
 	position:fixed;
 	right:20px;
@@ -63,6 +65,7 @@ nav {
 	font-family: 'Alfa Slab One', cursive;
 	font-size: 17px;
 	text-transform: none;
+	margin-bottom: 10px;
 }
 
 .btn:hover, .btn-large:hover {
@@ -70,16 +73,16 @@ nav {
 }
 
 #inspired-button {
-	width:180px;
+	width:120px;
 }
 
 #home-button {
-	width: 160px;
+	width: 120px;
 }
 
 
 #join-button {
-    width: 160px;
+    width: 120px;
    
 }
 
@@ -100,6 +103,34 @@ textarea.materialize-textarea:focus:not([readonly]) {
 	-webkit-box-shadow: 0 1px 0 0 #26a69a;
 	box-shadow: 0 1px 0 0 #f44336;
 }
+
+/* -------MODAL-------------------------------------- */
+#loginmodal {
+	border-radius: 50px;
+	background-color:#ffffffe7 ;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgba(255, 0, 0, 0.158);
+
+}
+
+#form-label {
+	color:rgb(145, 15, 15);
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 20px;
+}
+
+#login, #createUser {
+	background-color: rgb(145, 15, 15);
+	color: white;
+	border-radius: 50px;
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 17px;
+	text-transform: none;
+	position: relative;
+	right: 30px;
+}
+
 
 /*-------NEWS PAGE CSS--------------------------------*/
 #urlToImage {
@@ -131,6 +162,23 @@ textarea.materialize-textarea:focus:not([readonly]) {
 	margin: 20px;
 }
 
+#source {
+	font-family: 'Alfa Slab One', cursive;
+}
+
+#url {
+	font-size: 25px;
+	text-align: center;
+	margin: 30px;
+}
+
+#published {
+	text-align: right;
+	margin: 15px;
+}
+
+/* ----MEDIA QUERIES----------------------------------- */
+
 @media all and (max-width: 599px) and (min-width:320px) {
 	
 	nav{
@@ -150,15 +198,16 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 
 	#buttondiv{
-		width: 370px;
+		width: 360px;
 		position:fixed;
 		left:1px;
 		top: 5px;
 		z-index:1;
+		left: 10px;
 	}
 
 	#inspired-button {
-		width:180px;
+		width:115px;
 		height:50px;
 		background-color:#ffffff8c ;
 		border-style: solid;
@@ -168,7 +217,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 	}
 	
 	#home-button {
-		width: 160px;
+		width: 100px;
 		height:50px;
 		background-color:#ffffff8c ;
 		border-style: solid;
@@ -179,7 +228,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 
 	#join-button {
-        width: 160px;
+        width: 115px;
         height:50px;
         background-color:#ffffff8c ;
         border-style: solid;
@@ -187,19 +236,25 @@ textarea.materialize-textarea:focus:not([readonly]) {
         border-color: rgba(255, 0, 0, 0.158);
         color: #660000;
 	}
+
+
+	#modal-overlay{
+		max-width: 375;
+	}
+
+	#login, #createUser {
+
+		right: 7px;
+	}
 }
 
-#source {
-	font-family: 'Alfa Slab One', cursive;
-}
-
-#url {
-	font-size: 25px;
-	text-align: center;
-	margin: 30px;
-}
-
-#published {
-	text-align: right;
-	margin: 15px;
+@media all and (max-width: 1340px) and (min-width:600px) {
+	#buttondiv{
+		width: 390px;
+		margin-bottom: 10px;
+		position:fixed;
+		right:20px;
+		bottom: 45px;
+		z-index:1;
+	}
 }
