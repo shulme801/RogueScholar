@@ -16,6 +16,13 @@ nav {
 	margin-bottom: 20px;
 }
 
+#logout {
+	position: absolute;
+	top: 120px;
+	right: 20px;
+	color: white;
+}
+
 #page-title {
 	position: relative;
 	text-align: center;
@@ -84,7 +91,7 @@ nav {
 	background-color: rgb(145, 15, 15);
 	position:absolute;
 	bottom:0;
-	left:0;
+	right:0;
 	width:100%;
 }
 
@@ -126,6 +133,14 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 @media all and (max-width: 599px) and (min-width:320px) {
 	
+	nav{
+		height: 200px;
+	}
+
+	#logout {
+		top: 165px;
+		right: 0;
+	}
 	#title{
         font-size:20px;
         line-height: 27px;
@@ -171,7 +186,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
         border-width: 2px;
         border-color: rgba(255, 0, 0, 0.158);
         color: #660000;
-    }
+	}
 }
 
 #source {
