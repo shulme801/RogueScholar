@@ -1,4 +1,6 @@
 var db = require("../models");
+//Allows use to pull in random post
+const sequelize = require('../models').sequelize;
 
 module.exports = function(app) {
 
@@ -25,6 +27,22 @@ module.exports = function(app) {
 			res.json(dbUser);
 		});
 	});
+
+/* Get random post from posts model */
+
+  app.get("/api/random_post", function(req, res) {
+    db.Posts.find({
+      order: [
+        sequelize.fn( 'RAND' ),
+      ],
+      include: [
+        { model: db.Comments }
+      ]
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
 
 /* here are the database retrieve routes */
 

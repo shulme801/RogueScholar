@@ -1,12 +1,13 @@
 // Creates a comment and associates it with a post
 
 $("#create_comment").on("click", function(event) {
+  // event.preventDefault();
   event.preventDefault();
 
   // Grab the form elements
   var comment = {
     post_post_id: localStorage.getItem("post_id"),
-    content: $("textarea[name='content']").val().trim(),
+    content: $("textarea[name='createComment']").val().trim(),
   };
 
   console.log("form comment input: ", comment);
@@ -24,7 +25,7 @@ $("#create_comment").on("click", function(event) {
     }
 
     // Clear the form when submitting
-    $("input[name='create_comment']").val("");
+    $("textarea[name='createComment']").val("");
 
   });
 
