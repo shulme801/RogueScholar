@@ -72,6 +72,14 @@ nav {
 	background-color:#7D0707;
 }
 
+.btn:active, .btn-large:active {
+	background-color:rgb(233, 193, 61);
+}
+
+.btn:focus, .btn-large:focus {
+	background-color:rgb(233, 193, 61);
+}
+
 #inspired-button {
 	width:120px;
 }
@@ -246,6 +254,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 		right: 7px;
 	}
+
+	#randomPostContent {
+		margin: 10px;
+	}
 }
 
 @media all and (max-width: 1340px) and (min-width:600px) {
@@ -257,4 +269,36 @@ textarea.materialize-textarea:focus:not([readonly]) {
 		bottom: 45px;
 		z-index:1;
 	}
+}
+
+/*-------POSTS PAGE CSS--------------------------------*/
+.post {
+	font-size: 25px;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	padding: 20px;
+}
+
+.even {
+	background-color: rgb(206, 233, 240);
+	width: 90%;
+	position: relative;
+	left: 5%;
+	padding: 5px;
+	border-radius: 3px;
+	font-family: 'Nunito', sans-serif;
+}
+
+.odd {
+	background-color: rgb(156, 182, 202);
+	width: 90%;
+	position: relative;
+	left: 5%;
+	padding: 5px;
+	border-radius: 3px;
+	font-family: 'Nunito', sans-serif;
+}
+
+#randomPostContent {
+	margin-bottom: 20px;
 }
