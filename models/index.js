@@ -3,37 +3,15 @@
 var fs        = require('fs');
 var path      = require('path');
 var Sequelize = require('sequelize');
-var basename  = path.basename(__filename);
-
-if (process.env.JAWSDB_URL) {
-  var env = 'production';
-} else {
-  var env = 'development';
-}
-
+var basename  = path.basename(module.filename);
+var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
-var database = 'posts_db_dev';
-var username = 'root';
-var password = '';
-
-if (process.env.JAWSDB_URL) {
-  var sequelize = new Sequelize(process.env.JAWSDB_URL);
-}
-else {
-  var sequelize = new Sequelize(database, username, password, {
-    host: 'localhost',
-    dialect: 'mysql',
-
-    pool: {
-      max: 5,
-      min: 0,
-      acquire: 30000,
-      idle: 10000
-    },
-    "operatorsAliases": false 
-  });
+if (config.use_env_variable) {
+  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+} else {
+  var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 
