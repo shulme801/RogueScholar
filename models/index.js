@@ -8,11 +8,28 @@ var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable], config);
-} else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+var database = 'posts_db_dev';
+var username = 'root';
+var password = '';
+
+if (process.env.JAWSDB_URL) {
+  var sequelize = new Sequelize(JAWSDB_URL);
 }
+else {
+  var sequelize = new Sequelize(database, username, password, {
+    host: 'localhost',
+    dialect: 'mysql',
+
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    },
+    "operatorsAliases": false 
+  });
+}
+
 
 fs
   .readdirSync(__dirname)
