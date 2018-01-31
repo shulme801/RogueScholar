@@ -18,12 +18,15 @@ $(document).ready(function(){
 
 
   function writeRandomPost(data) {
-
-    $("#randomPostContent").text(data.content);
-    // $("#randomPostContent").append(data.Comments[0].content);
+    $("#randomPostContent").text("");
+    $("#randomPostContent").append("<p class='post'>" + data.content + "</p>");
+    //$("#randomPostContent").append(data.Comments[0].content);
     for (var i = 0; i < data.Comments.length; i++) {
-      $("#randomPostContent").append("<br>");
-      $("#randomPostContent").append(data.Comments[i].content);
+      if (i%2) {
+        $("#randomPostContent").append("<p class = 'even'>" + data.Comments[i].content + "</p>");
+      } else {
+        $("#randomPostContent").append("<p class = 'odd'>" + data.Comments[i].content + "</p>");
+      }
     };
 
   }
