@@ -22,6 +22,26 @@
 </head>
 	<body>
 		{{{ body }}}
+		{{!-- Modal --}}
+  		<!-- Modal Trigger -->
+  		<!-- <a class="waves-effect waves-light btn modal-trigger" href="#loginmodal">Modal</a> -->
+
+		<!-- Modal Structure -->
+		<div id="loginmodal" class="modal">
+			<div class="modal-content">
+			<form>
+				<label for="username" id="form-label">Enter User Name</label>
+				<input type="text" name="username">
+				<label for="createUsername" id="form-label">Create User</label>
+				<input type="text" class="form-control" name="createUsername">
+			</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action waves-effect waves-green btn-flat" id="login">Login</a>
+				<a href="#!" class="modal-action waves-effect waves-green btn-flat" id="createUser">Create User</a>
+			</div>
+		</div>
+  		{{!-- Modal --}}
 		<script src="https://code.jquery.com/jquery.js"></script>
 		{{!-- Logan --}}
 		<!--Import jQuery before materialize.js-->
