@@ -44,6 +44,6 @@ var db = require("./models");
 // db.sequelize.sync({ force: true })
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log("Rogue Scholar App is Alive and Listening on PORT " + PORT);
   });
 });

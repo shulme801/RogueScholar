@@ -16,14 +16,6 @@ $("#create_comment").on("click", function(event) {
   $.post("/api/create_comment", comment,
     function(data) {
 
-    console.log("Data from db ", data);
-
-    if(data) {
-      console.log("Successfully created comment");
-    } else {
-      console.log("Failed to create comment");
-    }
-
     // Clear the form when submitting
     $("textarea[name='createComment']").val("");
 
