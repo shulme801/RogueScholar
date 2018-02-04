@@ -34,20 +34,15 @@ $("#login").on("click", function(event) {
     username: $("input[name='username']").val().trim(),
   };
 
-  console.log("form username input: ", username);
-
   // Post form data to our api route that handles user login
   $.post("/api/login_user", username,
     function(data) {
 
-    console.log("Data from db ", data);
-
     if (data) {
       localStorage.setItem("user_id", data.user_id);
-      console.log("Here is the stored user_id: ", data.user_id);
       $('#loginmodal').modal('close');
     } else {
-      console.log("This user does not exist, please create user before logging in");
+      // Error Handling goes here in next release
     }
 
     // Clear the form when submitting
@@ -60,7 +55,7 @@ $("#login").on("click", function(event) {
 $("#logout").on("click", function(event) {
 
   localStorage.clear();
-  console.log("You are now logged out!");
+
   $('#loginmodal').modal('open');
 
 });

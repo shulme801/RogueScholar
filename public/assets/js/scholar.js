@@ -1,13 +1,11 @@
 $(document).ready(function() {
 
     $("#inspired-button").on("click", function() {
-        console.log("testing")
         getNews();
     });
 
     function getNews() {
         $.get("/apinews", function(data) {
-            console.log("func getNews ", data);
             $("#source").text(data.source.name);
             $("#author").text(data.author);
             $("#title").text(data.title);

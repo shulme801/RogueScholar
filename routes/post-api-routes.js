@@ -1,5 +1,6 @@
 var db = require("../models");
-//Allows use to pull in random post
+
+//Grab all the models and make them known to Sequelize
 const sequelize = require('../models').sequelize;
 
 module.exports = function(app) {
@@ -8,7 +9,6 @@ module.exports = function(app) {
 /* Here are the database create record routes */
 	// create post that is associated with the user_id stored in local storage
 	app.post("/api/create_post", function(req, res) {
-		console.log(req.body);
 		db.Posts.create({
 			user_user_id: req.body.user_user_id,
 			content: req.body.content,
@@ -19,7 +19,6 @@ module.exports = function(app) {
 
    // create comment that is associated with the comment_id stored in local storage
    app.post("/api/create_comment", function(req, res) {
-		console.log(req.body);
 		db.Comments.create({
 			post_post_id: req.body.post_post_id,
 			content: req.body.content,
